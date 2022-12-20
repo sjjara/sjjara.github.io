@@ -1,10 +1,23 @@
 ---
 layout: post
-title: You're up and running!
+title: INF3863-1 - Sistemas Recomendadores
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+Clase 6 - Justicia, Explicabilidad y Transparencia en Sistemas de Recomendación
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+Es un hecho que estamos viviendo días increíbles, con potentes avances en la inteligencia artificial. Así podemos verlo en grandes hitos como los primeros autos que lograron conducirse de manera autónoma, una IA que ha logrado vencer al campeón mundial de Go o la generación de escenas desde una imagen, por nombrar solo algunos de estos sorprendentes avances.
+Si bien, estos avances son muy positivos para el desarrollo tecnológico, al mismo tiempo también nos presentan ciertos desafíos, los cuales estaremos describiendo en este resumen.
+Es así como el caso de COMPAS, un sistema usado en EE. UU. para predecir la probabilidad de reincidencia de personas condenadas por delitos, han demostrado presentar ciertos sesgos raciales. De una forma similar, tenemos el caso de estudio de Joy Buolamwini, investigadora de MIT MediaLab, donde también se evidencia un peor rendimiento detectando rostros de mujeres de tez más oscura. Ciertamente en cualquier caso como estos, donde se pueda perjudicar a algún grupo de personas de manera discriminatoria, siempre será un tema delicado en este tipo de sistemas que finalmente progresan a pasos agigantados, o al menos más rápido de lo que podemos encontrar acuerdos para regular su uso y aplicaciones.
+Este tipo de comportamientos no deseados en los sistemas, se pueden explicar desde el hecho en el que su rendimiento se mide por métricas, pero nadie asegura que esas métricas sean justas.
+Por el mismo motivo y muchos más, grandes sistemas de recomendación como lo es el caso de YouTube han tenido que cambiar la arquitectura de su sistema varias veces durante los últimos años, para mejorar esos distintos aspectos. Dentro de sus principales desafíos tienen el hecho de no lograr diferenciar fácilmente contenido como violento o fake news de manera automática. Generalmente este tipo de problemas se resuelven con otro sistema satélite que se encarga del filtrado de contenido, que no se encuentra dentro del mismo sistema de recomendación, y compañías como Facebook, gastan millones de dólares al año intentando lidiar con estos contenidos no aptos para la plataforma, donde han tenido que solucionar muchos de esos problemas de manera manual, con personas que revisen los contenidos reportados como no aptos.
+Continuando con el caso de YouTube, otro tema muy relevante es la transparencia en el contenido que se está recomendando. Entonces un ingeniero de YouTube creó un sistema que logra medir cuales son los contenidos que se están recomendando en base a una pregunta inicial utilizando un robot que realiza distintas caminatas aleatorias por el contenido, saltando de recomendación en recomendación. También existía la preocupación de si los usuarios de la plataforma realmente estaban utilizando las recomendaciones hechas por el sistema, a lo que estudios han demostrado que al menos un 75% de los usuarios en distintos rangos etarios, si lo realizan al menos de manera ocasional.
+Ahora que hemos visto los casos mencionados en los párrafos anteriores. Debería importarnos la correcta evaluación de estos sistemas. Personalmente no tengo duda de que, si debería importarnos, dado que estos sistemas cada vez se utilizan para fines más relevantes en nuestras vidas.
+Esta preocupación no es algo nuevo, y de hecho en algunos lugares del mundo se ha avanzado bastante en esta discusión sobre como regular en particular, el uso de los datos. En el año 2018, la Unión Europea generó una normativa llamada General Data Protection on Regulation (GDPR) que se encarga de proteger los datos de los ciudadanos y residentes de la Unión Europea y todas las compañías que allí residan o bien trabajen con datos de personas, deben garantizar su correcto uso en base a dicha legislación.
+Por otra parte, el año 2019 se creó la FACCT, una conferencia donde se reúnen profesionales de distintas disciplinas para hablar sobre los impactos de estos sistemas socio-técnicos en la sociedad y realizaron un documento de principios para Accountable Algorithms, para el impacto social de estos algoritmos.
+¿Cómo medir, estudiar y prevenir el sesgo en Sistemas Recomendadores? Existen algunas definiciones para tener en cuenta para lidiar con estos aspectos tales como:
+•	Fairness: La propiedad de ser justo o equitativo vs. Sesgo: inclinación hacia algo; predisposición, parcialidad, prejuicio, preferencia, predilección, discriminación.
+•	Accountability: Ser responsable significa ser
+•	sujeto a dar cuenta o tener la obligación de informar, explicar o justificar algo -> IA explicable (XAI).
+•	Transparency: Es el principio de que los factores que influir en las decisiones tomadas por los algoritmos debe ser visible, o transparente, para las personas que usan, regulan y se ven afectadas por los sistemas que emplean esos algoritmos.
+Todas ellas se denominan “FAT Definitions”, un acrónimo de esas tres definiciones anteriores.
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
