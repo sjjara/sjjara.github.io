@@ -2,10 +2,8 @@
 layout: post
 title: INF3863-1 - Sistemas Recomendadores
 ---
----
-layout: post
-title: Clase 6 - Justicia, Explicabilidad y Transparencia en Sistemas de Recomendación
----
+
+## Clase 6 - Justicia, Explicabilidad y Transparencia en Sistemas de Recomendación
 
 Es un hecho que estamos viviendo días increíbles, con potentes avances en la inteligencia artificial. Así podemos verlo en grandes hitos como los primeros autos que lograron conducirse de manera autónoma, una IA que ha logrado vencer al campeón mundial de Go o la generación de escenas desde una imagen, por nombrar solo algunos de estos sorprendentes avances.
 
@@ -24,7 +22,9 @@ Esta preocupación no es algo nuevo, y de hecho en algunos lugares del mundo se 
 
 Por otra parte, el año 2019 se creó la FACCT, una conferencia donde se reúnen profesionales de distintas disciplinas para hablar sobre los impactos de estos sistemas socio-técnicos en la sociedad y realizaron un documento de principios para Accountable Algorithms, para el impacto social de estos algoritmos.
 
-¿Cómo medir, estudiar y prevenir el sesgo en Sistemas Recomendadores? Existen algunas definiciones para tener en cuenta para lidiar con estos aspectos tales como:
+### ¿Cómo medir, estudiar y prevenir el sesgo en Sistemas Recomendadores? 
+
+Existen algunas definiciones para tener en cuenta para lidiar con estos aspectos tales como:
 
 •	Fairness: La propiedad de ser justo o equitativo vs. Sesgo: inclinación hacia algo; predisposición, parcialidad, prejuicio, preferencia, predilección, discriminación.
 •	Accountability: Ser responsable significa ser
@@ -33,16 +33,14 @@ Por otra parte, el año 2019 se creó la FACCT, una conferencia donde se reúnen
 
 Todas ellas se denominan “FAT Definitions”, un acrónimo de esas tres definiciones anteriores.
 
----
-layout: post
-title: Clase 8 – Sistemas Recomendares Conversacionales
----
 
-Recomendación basada en críticas 
+## Clase 8 – Sistemas Recomendares Conversacionales
+
+### Recomendación basada en críticas 
 
 En este tipo de sistemas, la recomendación se inicia con una propuesta inicial que es refinada a través de críticas del usuario.
 
-¿Qué es un sistema conversacional?
+### ¿Qué es un sistema conversacional?
 
 Un sistema recomendador que da sugerencias personalizadas a través de diálogos en lenguaje natural con un sistema.
 
@@ -52,21 +50,21 @@ Una forma natural de recibir recomendaciones:
 
 Es importante mencionar que La IA Conversacional le da más poder a los chatbots, pero no todos los chatbots están basados en IA Conversacional, por lo tanto son dos conceptos distintos que podrían estar o no relacionados.
 
-Test de Turing
+### Test de Turing
 
 Estos sistemas se pueden medir con el Test de Turing que básicamente evalúa la capacidad de una computadora de imitar a un humano.
 
-Framework general de un sistema conversacional 
+### Framework general de un sistema conversacional 
 
 La manera en la que tenemos más chances de conocer a un usuario es a través de su personalidad, desde lo cual estos sistemas pueden resultar de mucha ayuda para capturar dicha información.
 
-¿Por qué́ son importantes los sistemas recomendadores conversacionales? 
+### ¿Por qué́ son importantes los sistemas recomendadores conversacionales? 
 
 •	Uso de técnicas de reinforcement learning y deep learning han permitido que estos sistemas conversacionales sean usables (no perfectos) por usuarios finales. (Alexa, Siri, etc..) 
 •	Sirve para extraer de manera dinámica más feedback del usuario y patrones de uso. 
 •	Más datos nos permiten mejorar más aún estos modelos conversacionales.
 
-Formalización básica del problema Sistema recomendador conversacional
+### Formalización básica del problema Sistema recomendador conversacional
 
 INPUT 
 •	Historial de diálogos: últimas N interacciones con el sistema. 
@@ -78,7 +76,7 @@ OUTPUT
 •	Items recomendados para el usuario (una o múltiples veces) 
 •	 [opcional] Una explicación de porqué está recomendando algo.
 
-Diferentes tipos de diálogo con un sistema conversacional
+### Diferentes tipos de diálogo con un sistema conversacional
  
 Evaluación de la calidad de la conversación 
 •	Turn-level metrics 
@@ -94,16 +92,17 @@ Evaluación de la calidad de la conversación
 •	incremento en ventas 
 •	satisfacción del usuario, ratings, retención de clientes, lealtad de clientes, etc. 
 
-Arquitectura modular
+### Arquitectura modular
 
 5 grandes módulos:
+
 1.	Natural Language Understanding / Generation (entiende y genera diálogos) 
 2.	Dialogue State Management (controla quién habla y qué acciones toma) 
 3.	Sistema Recomendador 
 4.	Explicación [opcional] 
 5.	Knowledge (conocimiento externo)
   
-Natural language understanding 
+### Natural language understanding 
 
 Entender lo que quiere el usuario dado el contexto e información del texto. (un área más específica de NLP) 
 Dentro de los principales objetivos están: 
@@ -112,25 +111,27 @@ Dentro de los principales objetivos están:
 •	Detección de atributos/aspectos de ítems 
 •	Detección de intenciones del usuario 
 •	Análisis de sentimientos
+
 Estas tareas pueden ser abordadas por RNNs o Transformers.
 
----
-layout: post
-title: Clase 9 – Resumen y GNN
----
 
-Principales métodos de recomendación
+## Clase 9 – Resumen y GNN
+
+### Principales métodos de recomendación
 
 -Filtrado colaborativo (vecindarios de personas con gustos parecidos) buscamos cosas que le gustaran a los usuarios parecidos y eso recomendamos. Tiene el problema de cold start, ítems con pocas recomendaciones
 -Filtrado por contenido
 -También vimos la métrica de RSME
 -Métodos latentes – usuarios e ítems con vectores, producto punto, vectores latentes, reducción de dimensionalidad.
 -Profiling, encontrar perfil del usuario y describir sus gustos para recomendar.
+
 -Deep learning (Sistemas recomendadores)
 Ej: youtube
-Aprendizaje reforzado para recomendar carátulas.
 
-10 grandes problemas para los sistemas de recomendación
+Aprendizaje reforzado
+Ej: Recomendar carátulas.
+
+### 10 grandes problemas para los sistemas de recomendación
 
 1.	Filtros burbuja y como ayudan a la polarización, todos los sistemas que filtran nos esconden contenido, diversidad – Solución: dar contenidos diversos. sesgos cognitivos evitan dar respuestas claras
 2.	IA (aún no son inteligentes): Las IA no deciden de que se va a aprender, tampoco sabe distinguir entre bueno o malo. contenido verdadero o fake news, violencia, etc.
@@ -142,35 +143,36 @@ Aprendizaje reforzado para recomendar carátulas.
 8.	Conductismo: Normalmente aprendemos del historial del usuario, pero no a partir de lo que siente o experimenta. Estos pueden impactar directamente en la vida de los usuarios
 9.	RecSys para audiencias no tradicionales: No se han estudiado lo suficiente, como para segmentos de usuarios no tradicionales.
 10.	Privacidad en RecSys: Cuando mejor rinden, es cuando tienen más datos de los usuarios, pero hay poco control de cómo se trata esos datos.
-11.	
-Graph Neural Network para recomendaciones
+
+### Graph Neural Network para recomendaciones
 
 Un grafo es una forma de representar una red. Consiste en un conjunto de nodos conectados entre sí por líneas llamadas enlaces.
 Es bastante natural modelar un problema de recomendación como un problema de grafos. Las redes neuronales basadas en grafos son muy potentes y tienen muchos usos, tales como: predicción de links, explicar topologías de red para hacer contrafactuales, etc.
 
 El concepto de red neuronal de grafos fue propuesto en el año 2008 por Scarselli et al. el cual refiere a la capacidad de representar nodos a partir de las características que tienen sus vecinos. Estas relaciones pueden ser representadas como vectores (embedings) en un espacio vectorial, donde los nodos con caminos cercanos demuestran cercanía entre nodos.
 
-GNN: Filtro y Selección
+### GNN: Filtro y Selección
 
 - Filtro: cambios en atributos del nodo en base a operaciones del grafo o vecinos del nodo.
 - Selección: cambios en el grafo producto de operaciones como pooling.
-- 
-Convolución en grafos
+
+### Convolución en grafos
 
 Permiten obtener features o representación de un nodo a partir de las características de los vecinos.
 
-Aprendizaje Inductivo vs Transductivo
+### Aprendizaje Inductivo vs Transductivo
 
-En aprendizaje transductivo, el modelo ya ha visto tanto datos de entrenamiento como de test. Trade-off: Si se agrega un nuevo nodo al grafo, se debe entrenar nuevamente al modelo
+En aprendizaje transductivo, el modelo ya ha visto tanto datos de entrenamiento como de test. Trade-off: Si se agrega un nuevo nodo al grafo, se debe entrenar nuevamente al modelo.
+
 En aprendizaje inductivo en cambio, el modelo solo ve los datos de entrenamiento. Por tanto, el modelo se utilizará para predecir etiquetas para los datos no vistos en el grafo.
 
-Clases de GNN
+### Clases de GNN
 
 - Graph Convolutional Neural Network: utilizar pooling y convoluciones para extraer los features dede sus nodos vecinos.
 - Gated Graph Neural Network: Se introduce una GRU para aprender representaciones de nodos, absorbiendo iterativamente la influencia de otros nodos.
 - Attention Network (GAT): Se utilizan mecanismos de atención para aprender distintas relevancias que tienen algunos usuarios o ítems sobre otros.
 
-GraphSAGE
+### GraphSAGE
 
 Método inductivo para generalizar hacia nodos no observados el cual se basa en el muestreo y agregación de nodos vecinos por k niveles.
 
