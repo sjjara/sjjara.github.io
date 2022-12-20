@@ -2,8 +2,10 @@
 layout: post
 title: INF3863-1 - Sistemas Recomendadores
 ---
-
-Clase 6 - Justicia, Explicabilidad y Transparencia en Sistemas de Recomendación
+---
+layout: post
+subtitle: Clase 6 - Justicia, Explicabilidad y Transparencia en Sistemas de Recomendación
+---
 
 Es un hecho que estamos viviendo días increíbles, con potentes avances en la inteligencia artificial. Así podemos verlo en grandes hitos como los primeros autos que lograron conducirse de manera autónoma, una IA que ha logrado vencer al campeón mundial de Go o la generación de escenas desde una imagen, por nombrar solo algunos de estos sorprendentes avances.
 
@@ -31,7 +33,10 @@ Por otra parte, el año 2019 se creó la FACCT, una conferencia donde se reúnen
 
 Todas ellas se denominan “FAT Definitions”, un acrónimo de esas tres definiciones anteriores.
 
-Clase 8 – Sistemas Recomendares Conversacionales
+---
+layout: post
+subtitle: Clase 8 – Sistemas Recomendares Conversacionales
+---
 
 Recomendación basada en críticas 
 
@@ -108,3 +113,69 @@ Dentro de los principales objetivos están:
 •	Detección de intenciones del usuario 
 •	Análisis de sentimientos
 Estas tareas pueden ser abordadas por RNNs o Transformers.
+
+---
+layout: post
+subtitle: Clase 9 – Resumen y GNN
+---
+
+Principales métodos de recomendación
+
+-Filtrado colaborativo (vecindarios de personas con gustos parecidos) buscamos cosas que le gustaran a los usuarios parecidos y eso recomendamos. Tiene el problema de cold start, ítems con pocas recomendaciones
+-Filtrado por contenido
+-También vimos la métrica de RSME
+-Métodos latentes – usuarios e ítems con vectores, producto punto, vectores latentes, reducción de dimensionalidad.
+-Profiling, encontrar perfil del usuario y describir sus gustos para recomendar.
+-Deep learning (Sistemas recomendadores)
+Ej: youtube
+Aprendizaje reforzado para recomendar carátulas.
+
+10 grandes problemas para los sistemas de recomendación
+
+1.	Filtros burbuja y como ayudan a la polarización, todos los sistemas que filtran nos esconden contenido, diversidad – Solución: dar contenidos diversos. sesgos cognitivos evitan dar respuestas claras
+2.	IA (aún no son inteligentes): Las IA no deciden de que se va a aprender, tampoco sabe distinguir entre bueno o malo. contenido verdadero o fake news, violencia, etc.
+3.	Metricas son distintas a los objetivos, pasar de f de perdida a un objetivo más general, no es trivial.
+4.	Falta de control y transparencia para el usuario.
+5.	¿Son las recomendaciones justas? Es difícil de determinar dado que los sesgos pueden venir de cualquiera de las etapas del sistema o incluso en sus actores.
+6.	Métricas: Alinear las métricas puede ser complejo
+7.	Reproducibilidad de resultados de investigación: cuando otros investigadores tratan de replicar los resultados, tienen problemas y no generalizaban bien contra otros datasets.
+8.	Conductismo: Normalmente aprendemos del historial del usuario, pero no a partir de lo que siente o experimenta. Estos pueden impactar directamente en la vida de los usuarios
+9.	RecSys para audiencias no tradicionales: No se han estudiado lo suficiente, como para segmentos de usuarios no tradicionales.
+10.	Privacidad en RecSys: Cuando mejor rinden, es cuando tienen más datos de los usuarios, pero hay poco control de cómo se trata esos datos.
+11.	
+Graph Neural Network para recomendaciones
+
+Un grafo es una forma de representar una red. Consiste en un conjunto de nodos conectados entre sí por líneas llamadas enlaces.
+Es bastante natural modelar un problema de recomendación como un problema de grafos. Las redes neuronales basadas en grafos son muy potentes y tienen muchos usos, tales como: predicción de links, explicar topologías de red para hacer contrafactuales, etc.
+
+El concepto de red neuronal de grafos fue propuesto en el año 2008 por Scarselli et al. el cual refiere a la capacidad de representar nodos a partir de las características que tienen sus vecinos. Estas relaciones pueden ser representadas como vectores (embedings) en un espacio vectorial, donde los nodos con caminos cercanos demuestran cercanía entre nodos.
+
+GNN: Filtro y Selección
+
+- Filtro: cambios en atributos del nodo en base a operaciones del grafo o vecinos del nodo.
+- Selección: cambios en el grafo producto de operaciones como pooling.
+- 
+Convolución en grafos
+
+Permiten obtener features o representación de un nodo a partir de las características de los vecinos.
+
+Aprendizaje Inductivo vs Transductivo
+
+En aprendizaje transductivo, el modelo ya ha visto tanto datos de entrenamiento como de test. Trade-off: Si se agrega un nuevo nodo al grafo, se debe entrenar nuevamente al modelo
+En aprendizaje inductivo en cambio, el modelo solo ve los datos de entrenamiento. Por tanto, el modelo se utilizará para predecir etiquetas para los datos no vistos en el grafo.
+
+Clases de GNN
+
+- Graph Convolutional Neural Network: utilizar pooling y convoluciones para extraer los features dede sus nodos vecinos.
+- Gated Graph Neural Network: Se introduce una GRU para aprender representaciones de nodos, absorbiendo iterativamente la influencia de otros nodos.
+- Attention Network (GAT): Se utilizan mecanismos de atención para aprender distintas relevancias que tienen algunos usuarios o ítems sobre otros.
+
+GraphSAGE
+
+Método inductivo para generalizar hacia nodos no observados el cual se basa en el muestreo y agregación de nodos vecinos por k niveles.
+
+- Paso 1: Muestrear vecindarios de nodos
+- Paso 2: Aprender funciones de agregación para cada profundidad de búsqueda.
+- Paso 3: Predecir el contexto del grafo y la etiqueta de un nodo utilizando la información de la agregación.
+
+El muestreo en GraphSAGE permite escalar el aprendizaje hacia millones de nodos, sin embargo, para un k grande, el número de cálculos necesarios crece exponencialmente. Además, los nodos celebridades pueden ser muy costos de calcular. Para solucionar esto último, se puede muestrear de manera iterativa algunos vecinos del nodo, seleccionados de manera aleatoria para ahorrar cálculo.
