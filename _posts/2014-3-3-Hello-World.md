@@ -4,7 +4,7 @@ title: INF3863-1 - Sistemas Recomendadores
 ---
 ---
 layout: post
-subtitle: Clase 6 - Justicia, Explicabilidad y Transparencia en Sistemas de Recomendación
+title: Clase 6 - Justicia, Explicabilidad y Transparencia en Sistemas de Recomendación
 ---
 
 Es un hecho que estamos viviendo días increíbles, con potentes avances en la inteligencia artificial. Así podemos verlo en grandes hitos como los primeros autos que lograron conducirse de manera autónoma, una IA que ha logrado vencer al campeón mundial de Go o la generación de escenas desde una imagen, por nombrar solo algunos de estos sorprendentes avances.
@@ -35,7 +35,7 @@ Todas ellas se denominan “FAT Definitions”, un acrónimo de esas tres defini
 
 ---
 layout: post
-subtitle: Clase 8 – Sistemas Recomendares Conversacionales
+title: Clase 8 – Sistemas Recomendares Conversacionales
 ---
 
 Recomendación basada en críticas 
@@ -116,7 +116,7 @@ Estas tareas pueden ser abordadas por RNNs o Transformers.
 
 ---
 layout: post
-subtitle: Clase 9 – Resumen y GNN
+title: Clase 9 – Resumen y GNN
 ---
 
 Principales métodos de recomendación
